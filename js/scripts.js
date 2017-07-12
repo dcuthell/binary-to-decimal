@@ -1,8 +1,14 @@
 //Backend
 
 function binToDec(userInput){
-  var result = userInput;
-  return result;
+  var power = userInput.length -1;
+  var num = 0;
+  for (var i = power; i>=0; i--){
+    if(userInput[(power-i)] === "1"){
+      num += Math.pow(2, i);
+    }
+  }
+  return num;
 }
 
 //User Interface
